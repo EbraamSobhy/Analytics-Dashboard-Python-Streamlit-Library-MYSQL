@@ -19,12 +19,12 @@ def get_connection():
 
 def view_all_data():
     """
-    Fetch all data from the `python_query_csv` table.
+    Fetch all data from the `python_query_CSV` table.
     """
     conn = get_connection()
     try:
         cursor = conn.cursor()
-        cursor.execute('SELECT * FROM python_query_csv')
+        cursor.execute('SELECT * FROM python_query_CSV')
         data = cursor.fetchall()
         return data
     except mysql.connector.Error as err:
